@@ -17,7 +17,7 @@ function Register() {
       tipo
     });
     try {
-      await axios.post('http://localhost:8081/api/v1/usuarios', { username, password, tipo });
+      await axios.post('http://192.168.4.112:8081/api/v1/usuarios', { username, password, tipo });
       setSuccess('Registration successful!');
       setUsername('');
       setPassword('');

@@ -10,7 +10,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8081/api/v1/usuarios', { username, password });
+      const response = await axios.post('http://192.168.4.112:8081/api/v1/usuarios', { username, password });
       localStorage.setItem('token', response.data.token);
       if (response.data.tipo === 'maestro') {
         window.location.href = '/maestro-dashboard';
