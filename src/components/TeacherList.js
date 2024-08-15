@@ -7,14 +7,14 @@ function TeacherList() {
 
   useEffect(() => {
     const fetchTeachers = async () => {
-      const response = await axios.get('http://localhost:8081/api/v1/maestros');
+      const response = await axios.get('http://192.168.4.112:8081/api/v1/maestros');
       setTeachers(response.data);
     };
     fetchTeachers();
   }, []);
 
   const deleteTeacher = async (id) => {
-    await axios.delete(`http://localhost:8081/api/v1/maestros/${id}`);
+    await axios.delete(`http://192.168.4.112:8081/api/v1/maestros/${id}`);
     setTeachers(teachers.filter((teacher) => teacher.id !== id));
   };
 
