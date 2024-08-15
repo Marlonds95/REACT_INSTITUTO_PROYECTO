@@ -19,13 +19,13 @@ function App() {
               <StyledLink to="/login">Login</StyledLink>
             </NavItem>
             <NavItem>
-              <StyledLink to="/register">Register</StyledLink>
+              <StyledLink to="/register">Registro</StyledLink>
             </NavItem>
             <NavItem>
-              <StyledLink to="/teachers">Teachers</StyledLink>
+              <StyledLink to="/teachers">Maestros</StyledLink>
             </NavItem>
             <NavItem>
-              <StyledLink to="/students">Students</StyledLink>
+              <StyledLink to="/students">Estudiantes</StyledLink>
             </NavItem>
           </NavList>
         </Nav>
