@@ -7,14 +7,14 @@ function StudentList() {
 
   useEffect(() => {
     const fetchStudents = async () => {
-      const response = await axios.get('http://localhost:8080/api/students');
+      const response = await axios.get('http://localhost:8081/api/v1/estudiantes');
       setStudents(response.data);
     };
     fetchStudents();
   }, []);
 
   const deleteStudent = async (id) => {
-    await axios.delete(`http://localhost:8080/api/students/${id}`);
+    await axios.delete(`http://localhost:8081/api/v1/estudiantes/${id}`);
     setStudents(students.filter((student) => student.id !== id));
   };
 

@@ -7,14 +7,14 @@ function TeacherList() {
 
   useEffect(() => {
     const fetchTeachers = async () => {
-      const response = await axios.get('http://localhost:8080/api/teachers');
+      const response = await axios.get('http://localhost:8081/api/v1/maestros');
       setTeachers(response.data);
     };
     fetchTeachers();
   }, []);
 
   const deleteTeacher = async (id) => {
-    await axios.delete(`http://localhost:8080/api/teachers/${id}`);
+    await axios.delete(`http://localhost:8081/api/v1/maestros/${id}`);
     setTeachers(teachers.filter((teacher) => teacher.id !== id));
   };
 
@@ -35,7 +35,7 @@ function TeacherList() {
             <tr key={teacher.id}>
               <td>{teacher.id}</td>
               <td>{teacher.nombre}</td>
-              <td>{teacher.asignatura}</td>
+              <td>{teacher.materia}</td>
               <td>
                 <Button onClick={() => deleteTeacher(teacher.id)}>Delete</Button>
                 {/* Add Edit Button and logic here */}
